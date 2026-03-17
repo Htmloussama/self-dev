@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque de Fichiers | Pr.Oussama</title>
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap"></i> Pr.Oussama
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="courses.html" class="nav-link">Cours</a></li>
+                <li><a href="files.html" class="nav-link active">Bibliothèque</a></li>
+                <li><a href="about.html" class="nav-link">À Propos</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langBtn" onclick="toggleLanguage()">AR</button>
+                <button class="btn btn-outline">Connexion</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="section-padding" style="padding-top: 120px; background: rgba(0,0,0,0.3);">
+        <div class="container">
+            <h1 class="animate-on-load">Bibliothèque de Ressources</h1>
+            <p class="animate-on-load" style="color: var(--color-text-muted); max-width: 600px;">Téléchargez des séries d'exercices, des résumés de cours, des sujets de BAC et bien plus encore.</p>
+        </div>
+    </header>
+
+    <!-- SEARCH & FILTERS -->
+    <section class="section-padding" style="padding-top: 2rem;">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3rem; align-items: center;">
+                <div style="flex: 1; min-width: 300px; position: relative;">
+                    <input type="text" placeholder="Rechercher un fichier..." style="width: 100%; padding: 0.8rem 1rem 0.8rem 2.5rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); color: var(--color-text);">
+                    <i class="fas fa-search" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--color-text-muted);"></i>
+                </div>
+                <div style="display: flex; gap: 1rem;">
+                    <select style="padding: 0.8rem 1rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); color: var(--color-text);">
+                        <option>Toutes les matières</option>
+                        <option>Math</option>
+                        <option>Physique</option>
+                        <option>Bio</option>
+                        <option>Français</option>
+                        <option>Allemand</option>
+                        <option>Philosophie</option>
+                    </select>
+                    <select style="padding: 0.8rem 1rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); color: var(--color-text);">
+                        <option>Tous les types</option>
+                        <option>PDF</option>
+                        <option>DOC</option>
+                        <option>ZIP</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- FILES GRID -->
+            <div class="grid-auto">
+                <!-- File 1 -->
+                <div class="card file-card animate-on-load">
+                    <div class="file-icon"><i class="far fa-file-pdf"></i></div>
+                    <div class="file-info">
+                        <h4>Série d'exercices — Intégrales (BAC 2024)</h4>
+                        <div class="file-meta">
+                            <span class="badge badge-outline">Math</span>
+                            <span><i class="far fa-calendar-alt"></i> 12 Mars 2026</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="padding: 0.6rem;"><i class="fas fa-download"></i></button>
+                </div>
+
+                <!-- File 2 -->
+                <div class="card file-card animate-on-load">
+                    <div class="file-icon"><i class="far fa-file-pdf"></i></div>
+                    <div class="file-info">
+                        <h4>Cours complet — Oscillations forcées</h4>
+                        <div class="file-meta">
+                            <span class="badge badge-outline">Physique</span>
+                            <span><i class="far fa-calendar-alt"></i> 10 Mars 2026</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="padding: 0.6rem;"><i class="fas fa-download"></i></button>
+                </div>
+
+                <!-- File 3 -->
+                <div class="card file-card animate-on-load">
+                    <div class="file-icon"><i class="far fa-file-pdf"></i></div>
+                    <div class="file-info">
+                        <h4>Fiche révision — Caryotype et division cellulaire</h4>
+                        <div class="file-meta">
+                            <span class="badge badge-outline">Bio</span>
+                            <span><i class="far fa-calendar-alt"></i> 08 Mars 2026</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="padding: 0.6rem;"><i class="fas fa-download"></i></button>
+                </div>
+
+                <!-- File 4 -->
+                <div class="card file-card animate-on-load">
+                    <div class="file-icon"><i class="far fa-file-archive"></i></div>
+                    <div class="file-info">
+                        <h4>Sujets BAC Français 2019-2023</h4>
+                        <div class="file-meta">
+                            <span class="badge badge-outline">Français</span>
+                            <span><i class="far fa-calendar-alt"></i> 05 Mars 2026</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="padding: 0.6rem;"><i class="fas fa-download"></i></button>
+                </div>
+
+                <!-- File 5 -->
+                <div class="card file-card animate-on-load">
+                    <div class="file-icon"><i class="far fa-file-pdf"></i></div>
+                    <div class="file-info">
+                        <h4>Vocabulaire Allemand — Niveau BAC</h4>
+                        <div class="file-meta">
+                            <span class="badge badge-outline">Allemand</span>
+                            <span><i class="far fa-calendar-alt"></i> 01 Mars 2026</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="padding: 0.6rem;"><i class="fas fa-download"></i></button>
+                </div>
+
+                <!-- File 6 -->
+                <div class="card file-card animate-on-load">
+                    <div class="file-icon"><i class="far fa-file-pdf"></i></div>
+                    <div class="file-info">
+                        <h4>Formules Physique-Chimie — Résumé</h4>
+                        <div class="file-meta">
+                            <span class="badge badge-outline">Physique</span>
+                            <span><i class="far fa-calendar-alt"></i> 28 Fév 2026</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="padding: 0.6rem;"><i class="fas fa-download"></i></button>
+                </div>
+
+                <!-- File 7 -->
+                <div class="card file-card animate-on-load">
+                    <div class="file-icon"><i class="far fa-file-word"></i></div>
+                    <div class="file-info">
+                        <h4>Plan détaillé dissertation — La liberté</h4>
+                        <div class="file-meta">
+                            <span class="badge badge-outline">Philosophie</span>
+                            <span><i class="far fa-calendar-alt"></i> 25 Fév 2026</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="padding: 0.6rem;"><i class="fas fa-download"></i></button>
+                </div>
+
+                <!-- File 8 -->
+                <div class="card file-card animate-on-load">
+                    <div class="file-icon"><i class="far fa-file-pdf"></i></div>
+                    <div class="file-info">
+                        <h4>Exercices corrigés — Suites numériques</h4>
+                        <div class="file-meta">
+                            <span class="badge badge-outline">Math</span>
+                            <span><i class="far fa-calendar-alt"></i> 20 Fév 2026</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="padding: 0.6rem;"><i class="fas fa-download"></i></button>
+                </div>
+            </div>
+
+            <!-- PAGINATION -->
+            <div class="flex-center" style="margin-top: 4rem; gap: 0.5rem;">
+                <button class="btn btn-outline" style="padding: 0.5rem 1rem;"><i class="fas fa-chevron-left"></i></button>
+                <button class="btn btn-primary" style="padding: 0.5rem 1rem;">1</button>
+                <button class="btn btn-outline" style="padding: 0.5rem 1rem;">2</button>
+                <button class="btn btn-outline" style="padding: 0.5rem 1rem;"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pr.Oussama. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CUSTOMIZER PANEL -->
+    <div class="customizer-btn" id="customizerBtn"><i class="fas fa-paint-brush"></i></div>
+    <div class="customizer-panel" id="customizerPanel">
+        <div class="panel-header">
+            <h3>Personnaliser le Design</h3>
+            <i class="fas fa-times close-panel" id="closePanel"></i>
+        </div>
+        <div class="panel-section">
+            <h4>Thèmes Prédéfinis</h4>
+            <div class="theme-presets">
+                <div class="theme-item active" data-theme="académique"><span>Académique</span></div>
+                <div class="theme-item" data-theme="minimaliste"><span>Minimaliste</span></div>
+                <div class="theme-item" data-theme="cyber"><span>Cyber Sombre</span></div>
+                <div class="theme-item" data-theme="désert"><span>Désert Chaud</span></div>
+                <div class="theme-item" data-theme="océan"><span>Océan Propre</span></div>
+            </div>
+        </div>
+        <div class="panel-actions">
+            <button class="btn btn-primary" onclick="saveTheme()" style="flex: 1;">Sauvegarder</button>
+            <button class="btn btn-outline" onclick="resetTheme()" style="flex: 1;">Réinitialiser</button>
+        </div>
+    </div>
+
+    <script type="module" src="src/script.js"></script>
+</body>
+</html>

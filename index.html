@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pr.Oussama | Votre Partenaire Académique</title>
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap"></i> Pr.Oussama
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active" data-i18n="nav_home">Accueil</a></li>
+                <li><a href="courses.html" class="nav-link" data-i18n="nav_courses">Cours</a></li>
+                <li><a href="files.html" class="nav-link" data-i18n="nav_files">Bibliothèque</a></li>
+                <li><a href="about.html" class="nav-link" data-i18n="nav_about">À Propos</a></li>
+                <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langBtn" onclick="toggleLanguage()">AR</button>
+                <button class="btn btn-outline">Connexion</button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" style="display: none;"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content animate-on-load">
+                <h1 class="hero-title" data-i18n="hero_title">
+                    Pr.Oussama — <span>Votre Partenaire Académique</span>
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">
+                    Débloquez votre potentiel académique avec des cours structurés, des fichiers téléchargeables et des ressources éducatives de haute qualité.
+                </p>
+                <div class="hero-btns">
+                    <a href="courses.html" class="btn btn-primary" data-i18n="btn_explore">Explorer les Cours</a>
+                    <a href="about.html" class="btn btn-outline" style="margin-left: 1rem;">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- STATS BAR -->
+    <section class="stats-bar">
+        <div class="container stats-container">
+            <div class="stat-item animate-on-load">
+                <h3>1500+</h3>
+                <p data-i18n="stats_students">Étudiants</p>
+            </div>
+            <div class="stat-item animate-on-load">
+                <h3>45+</h3>
+                <p data-i18n="stats_courses">Cours</p>
+            </div>
+            <div class="stat-item animate-on-load">
+                <h3>200+</h3>
+                <p data-i18n="stats_files">Fichiers</p>
+            </div>
+            <div class="stat-item animate-on-load">
+                <h3>12</h3>
+                <p data-i18n="stats_subjects">Matières</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED COURSES -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header flex-center" style="flex-direction: column; text-align: center; margin-bottom: 3rem;">
+                <h2 class="animate-on-load">Cours à la Une</h2>
+                <div class="separator animate-on-load" style="width: 100px; margin: 1rem 0;"></div>
+            </div>
+
+            <div class="grid-auto">
+                <!-- Course 1 -->
+                <div class="card course-card animate-on-load">
+                    <div class="course-img">
+                        <img src="https://picsum.photos/seed/math1/600/400" alt="Math" referrerPolicy="no-referrer">
+                        <div class="lock-icon"><i class="fas fa-lock"></i></div>
+                    </div>
+                    <span class="badge badge-accent">Mathématiques</span>
+                    <h3 style="margin-top: 1rem;">Intégration par parties et par changement de variable</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Terminale Sciences</p>
+                    <a href="course.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Voir le Cours</a>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="card course-card animate-on-load">
+                    <div class="course-img">
+                        <img src="https://picsum.photos/seed/physics1/600/400" alt="Physics" referrerPolicy="no-referrer">
+                        <div class="lock-icon"><i class="fas fa-unlock"></i></div>
+                    </div>
+                    <span class="badge badge-accent">Physique</span>
+                    <h3 style="margin-top: 1rem;">Les oscillations mécaniques forcées — Résonance</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Terminale</p>
+                    <a href="course.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Voir le Cours</a>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="card course-card animate-on-load">
+                    <div class="course-img">
+                        <img src="https://picsum.photos/seed/bio1/600/400" alt="Biology" referrerPolicy="no-referrer">
+                        <div class="lock-icon"><i class="fas fa-lock"></i></div>
+                    </div>
+                    <span class="badge badge-accent">Sciences de la Vie</span>
+                    <h3 style="margin-top: 1rem;">La méiose et la diversité génétique</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Terminale</p>
+                    <a href="course.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Voir le Cours</a>
+                </div>
+            </div>
+            
+            <div class="flex-center" style="margin-top: 3rem;">
+                <a href="courses.html" class="btn btn-primary">Voir tous les cours</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LATEST FILES -->
+    <section class="section-padding" style="background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <div class="section-header flex-center" style="flex-direction: column; text-align: center; margin-bottom: 3rem;">
+                <h2 class="animate-on-load">Derniers Fichiers Ajoutés</h2>
+                <div class="separator animate-on-load" style="width: 100px; margin: 1rem 0;"></div>
+            </div>
+
+            <div class="grid-auto">
+                <div class="card file-card animate-on-load">
+                    <div class="file-icon"><i class="far fa-file-pdf"></i></div>
+                    <div class="file-info">
+                        <h4>Série d'exercices — Intégrales (BAC 2024)</h4>
+                        <div class="file-meta">
+                            <span><i class="fas fa-tag"></i> Math</span>
+                            <span><i class="fas fa-weight-hanging"></i> 1.2 MB</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="padding: 0.5rem;"><i class="fas fa-download"></i></button>
+                </div>
+
+                <div class="card file-card animate-on-load">
+                    <div class="file-icon"><i class="far fa-file-pdf"></i></div>
+                    <div class="file-info">
+                        <h4>Cours complet — Oscillations forcées</h4>
+                        <div class="file-meta">
+                            <span><i class="fas fa-tag"></i> Physique</span>
+                            <span><i class="fas fa-weight-hanging"></i> 2.5 MB</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="padding: 0.5rem;"><i class="fas fa-download"></i></button>
+                </div>
+
+                <div class="card file-card animate-on-load">
+                    <div class="file-icon"><i class="far fa-file-archive"></i></div>
+                    <div class="file-info">
+                        <h4>Sujets BAC Français 2019-2023</h4>
+                        <div class="file-meta">
+                            <span><i class="fas fa-tag"></i> Français</span>
+                            <span><i class="fas fa-weight-hanging"></i> 15 MB</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="padding: 0.5rem;"><i class="fas fa-download"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header flex-center" style="flex-direction: column; text-align: center; margin-bottom: 3rem;">
+                <h2 class="animate-on-load">Ce que disent nos étudiants</h2>
+                <div class="separator animate-on-load" style="width: 100px; margin: 1rem 0;"></div>
+            </div>
+
+            <div class="grid-auto">
+                <div class="card animate-on-load">
+                    <p style="font-style: italic; margin-bottom: 1.5rem;">"Grâce aux cours de Pr.Oussama, j'ai pu comprendre des concepts complexes en physique que je n'arrivais pas à saisir en classe. Une plateforme indispensable pour le BAC !"</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <img src="https://picsum.photos/seed/student1/50/50" style="border-radius: 50%;" alt="Student" referrerPolicy="no-referrer">
+                        <div>
+                            <h5 style="margin: 0;">Ahmed Ben Salem</h5>
+                            <small style="color: var(--color-text-muted);">Élève Terminale</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="card animate-on-load">
+                    <p style="font-style: italic; margin-bottom: 1.5rem;">"Les séries d'exercices sont très bien structurées et progressives. Les corrections détaillées m'ont beaucoup aidé à m'auto-évaluer."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <img src="https://picsum.photos/seed/student2/50/50" style="border-radius: 50%;" alt="Student" referrerPolicy="no-referrer">
+                        <div>
+                            <h5 style="margin: 0;">Sarra Mansour</h5>
+                            <small style="color: var(--color-text-muted);">Étudiante Université</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo footer-logo">
+                        <i class="fas fa-graduation-cap"></i> Pr.Oussama
+                    </div>
+                    <p class="footer-text">Votre partenaire académique pour l'excellence. Nous fournissons les meilleurs outils pour votre réussite scolaire.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Liens Rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="courses.html">Cours</a></li>
+                        <li><a href="files.html">Bibliothèque</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Matières</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Mathématiques</a></li>
+                        <li><a href="#">Physique</a></li>
+                        <li><a href="#">Sciences</a></li>
+                        <li><a href="#">Philosophie</a></li>
+                        <li><a href="#">Allemand</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope" style="margin-right: 10px; color: var(--color-accent);"></i> contact@oussama.tn</li>
+                        <li><i class="fas fa-phone" style="margin-right: 10px; color: var(--color-accent);"></i> +216 22 000 000</li>
+                        <li><i class="fas fa-map-marker-alt" style="margin-right: 10px; color: var(--color-accent);"></i> Tunis, Tunisie</li>
+                    </ul>
+                    <a href="https://wa.me/21622000000" class="btn btn-primary" style="margin-top: 1rem;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pr.Oussama. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CUSTOMIZER PANEL -->
+    <div class="customizer-btn" id="customizerBtn">
+        <i class="fas fa-paint-brush"></i>
+    </div>
+
+    <div class="customizer-panel" id="customizerPanel">
+        <div class="panel-header">
+            <h3>Personnaliser le Design</h3>
+            <i class="fas fa-times close-panel" id="closePanel"></i>
+        </div>
+
+        <div class="panel-section">
+            <div class="toggle-group" id="modeToggle" style="margin-bottom: 1rem;">
+                <div class="toggle-item active"><i class="fas fa-moon"></i> Dark</div>
+            </div>
+        </div>
+
+        <div class="panel-section">
+            <h4>Thèmes Prédéfinis</h4>
+            <div class="theme-presets">
+                <div class="theme-item active" data-theme="académique">
+                    <div class="swatch">
+                        <span style="background: #0A0E2A;"></span>
+                        <span style="background: #00D4FF;"></span>
+                        <span style="background: #FFD700;"></span>
+                    </div>
+                    <span>Académique</span>
+                </div>
+                <div class="theme-item" data-theme="minimaliste">
+                    <div class="swatch">
+                        <span style="background: #F5F5F0;"></span>
+                        <span style="background: #1A1A2E;"></span>
+                        <span style="background: #E63946;"></span>
+                    </div>
+                    <span>Minimaliste</span>
+                </div>
+                <div class="theme-item" data-theme="cyber">
+                    <div class="swatch">
+                        <span style="background: #0D0D0D;"></span>
+                        <span style="background: #39FF14;"></span>
+                        <span style="background: #FF00FF;"></span>
+                    </div>
+                    <span>Cyber Sombre</span>
+                </div>
+                <div class="theme-item" data-theme="désert">
+                    <div class="swatch">
+                        <span style="background: #1C1208;"></span>
+                        <span style="background: #F4A261;"></span>
+                        <span style="background: #E9C46A;"></span>
+                    </div>
+                    <span>Désert Chaud</span>
+                </div>
+                <div class="theme-item" data-theme="océan">
+                    <div class="swatch">
+                        <span style="background: #E8F4F8;"></span>
+                        <span style="background: #0077B6;"></span>
+                        <span style="background: #00B4D8;"></span>
+                    </div>
+                    <span>Océan Propre</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-section">
+            <h4>Contrôles Manuels</h4>
+            <div class="control-group">
+                <div class="control-label">
+                    <span>Couleur Primaire</span>
+                </div>
+                <input type="color" id="accentPicker" class="input-color">
+            </div>
+            <div class="control-group">
+                <div class="control-label">
+                    <span>Couleur de Fond</span>
+                </div>
+                <input type="color" id="bgPicker" class="input-color">
+            </div>
+            <div class="control-group">
+                <div class="control-label">
+                    <span>Taille de Police</span>
+                    <span id="fontSizeVal">100%</span>
+                </div>
+                <input type="range" id="fontSlider" min="80" max="130" value="100" class="input-slider">
+            </div>
+            <div class="control-group">
+                <div class="control-label">
+                    <span>Rayon des Bordures</span>
+                    <span id="radiusVal">12px</span>
+                </div>
+                <input type="range" id="radiusSlider" min="0" max="24" value="12" class="input-slider">
+            </div>
+            <div class="control-group">
+                <div class="control-label"><span>Style de Carte</span></div>
+                <div class="toggle-group">
+                    <div class="toggle-item active card-style-item" data-style="glass">Glass</div>
+                    <div class="toggle-item card-style-item" data-style="flat">Flat</div>
+                    <div class="toggle-item card-style-item" data-style="outlined">Outlined</div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="control-label"><span>Densité de Mise en Page</span></div>
+                <div class="toggle-group">
+                    <div class="toggle-item active density-item" data-density="comfortable">Confortable</div>
+                    <div class="toggle-item density-item" data-density="compact">Compact</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-actions">
+            <button class="btn btn-primary" onclick="saveTheme()" style="flex: 1;">Sauvegarder</button>
+            <button class="btn btn-outline" onclick="resetTheme()" style="flex: 1;">Réinitialiser</button>
+        </div>
+    </div>
+
+    <script type="module" src="src/script.js"></script>
+</body>
+</html>

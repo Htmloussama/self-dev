@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours | Pr.Oussama</title>
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap"></i> Pr.Oussama
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link" data-i18n="nav_home">Accueil</a></li>
+                <li><a href="courses.html" class="nav-link active" data-i18n="nav_courses">Cours</a></li>
+                <li><a href="files.html" class="nav-link" data-i18n="nav_files">Bibliothèque</a></li>
+                <li><a href="about.html" class="nav-link" data-i18n="nav_about">À Propos</a></li>
+                <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langBtn" onclick="toggleLanguage()">AR</button>
+                <button class="btn btn-outline">Connexion</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="section-padding" style="padding-top: 120px; background: rgba(0,0,0,0.3);">
+        <div class="container">
+            <h1 class="animate-on-load">Nos Cours Académiques</h1>
+            <p class="animate-on-load" style="color: var(--color-text-muted); max-width: 600px;">Explorez notre large gamme de cours conçus pour vous aider à exceller dans vos études. Filtrez par matière ou par niveau pour trouver ce dont vous avez besoin.</p>
+        </div>
+    </header>
+
+    <!-- FILTER BAR -->
+    <section class="section-padding" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="card animate-on-load" style="margin-bottom: 3rem;">
+                <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-end;">
+                    <div style="flex: 1; min-width: 250px;">
+                        <label style="display: block; font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--color-highlight);">RECHERCHER</label>
+                        <div style="position: relative;">
+                            <input type="text" placeholder="Rechercher un cours..." style="width: 100%; padding: 0.8rem 1rem 0.8rem 2.5rem; background: rgba(255,255,255,0.05); border: 1px solid var(--color-border); border-radius: var(--radius); color: var(--color-text);">
+                            <i class="fas fa-search" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--color-text-muted);"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--color-highlight);">MATIÈRE</label>
+                        <select style="padding: 0.8rem 1.5rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); color: var(--color-text);">
+                            <option>Toutes les matières</option>
+                            <option>Mathématiques</option>
+                            <option>Physique</option>
+                            <option>Sciences de la Vie</option>
+                            <option>Français</option>
+                            <option>Allemand</option>
+                            <option>Philosophie</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--color-highlight);">NIVEAU</label>
+                        <select style="padding: 0.8rem 1.5rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); color: var(--color-text);">
+                            <option>Tous les niveaux</option>
+                            <option>Terminale (BAC)</option>
+                            <option>Université</option>
+                            <option>Général</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" style="height: 50px;">Filtrer</button>
+                </div>
+            </div>
+
+            <!-- COURSES GRID -->
+            <div class="grid-auto">
+                <!-- Course 1 -->
+                <div class="card course-card animate-on-load">
+                    <div class="course-img">
+                        <img src="https://picsum.photos/seed/math1/600/400" alt="Math" referrerPolicy="no-referrer">
+                        <div class="lock-icon"><i class="fas fa-lock"></i></div>
+                    </div>
+                    <span class="badge badge-accent">Mathématiques</span>
+                    <h3 style="margin-top: 1rem;">Intégration par parties et par changement de variable</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Maîtrisez les techniques avancées d'intégration pour le BAC.</p>
+                    <a href="course.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Voir le Cours</a>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="card course-card animate-on-load">
+                    <div class="course-img">
+                        <img src="https://picsum.photos/seed/physics1/600/400" alt="Physics" referrerPolicy="no-referrer">
+                        <div class="lock-icon"><i class="fas fa-unlock"></i></div>
+                    </div>
+                    <span class="badge badge-accent">Physique</span>
+                    <h3 style="margin-top: 1rem;">Les oscillations mécaniques forcées — Résonance</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Étude détaillée des systèmes oscillants et du phénomène de résonance.</p>
+                    <a href="course.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Voir le Cours</a>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="card course-card animate-on-load">
+                    <div class="course-img">
+                        <img src="https://picsum.photos/seed/bio1/600/400" alt="Biology" referrerPolicy="no-referrer">
+                        <div class="lock-icon"><i class="fas fa-lock"></i></div>
+                    </div>
+                    <span class="badge badge-accent">Sciences de la Vie</span>
+                    <h3 style="margin-top: 1rem;">La méiose et la diversité génétique</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Comprendre les mécanismes de la reproduction cellulaire et de l'hérédité.</p>
+                    <a href="course.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Voir le Cours</a>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="card course-card animate-on-load">
+                    <div class="course-img">
+                        <img src="https://picsum.photos/seed/fr1/600/400" alt="French" referrerPolicy="no-referrer">
+                        <div class="lock-icon"><i class="fas fa-lock"></i></div>
+                    </div>
+                    <span class="badge badge-accent">Français</span>
+                    <h3 style="margin-top: 1rem;">Rédiger une dissertation philosophique</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Méthodologie complète pour réussir votre épreuve de philosophie.</p>
+                    <a href="course.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Voir le Cours</a>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="card course-card animate-on-load">
+                    <div class="course-img">
+                        <img src="https://picsum.photos/seed/ger1/600/400" alt="German" referrerPolicy="no-referrer">
+                        <div class="lock-icon"><i class="fas fa-lock"></i></div>
+                    </div>
+                    <span class="badge badge-accent">Allemand</span>
+                    <h3 style="margin-top: 1rem;">Konjugation starker Verben im Präteritum</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Apprenez la conjugaison des verbes forts au prétérit en allemand.</p>
+                    <a href="course.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Voir le Cours</a>
+                </div>
+
+                <!-- Course 6 -->
+                <div class="card course-card animate-on-load">
+                    <div class="course-img">
+                        <img src="https://picsum.photos/seed/math2/600/400" alt="Math" referrerPolicy="no-referrer">
+                        <div class="lock-icon"><i class="fas fa-lock"></i></div>
+                    </div>
+                    <span class="badge badge-accent">Mathématiques</span>
+                    <h3 style="margin-top: 1rem;">Suites numériques — Convergence et limites</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Étude approfondie des suites et de leur comportement à l'infini.</p>
+                    <a href="course.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Voir le Cours</a>
+                </div>
+            </div>
+
+            <!-- PAGINATION -->
+            <div class="flex-center" style="margin-top: 4rem; gap: 0.5rem;">
+                <button class="btn btn-outline" style="padding: 0.5rem 1rem;"><i class="fas fa-chevron-left"></i></button>
+                <button class="btn btn-primary" style="padding: 0.5rem 1rem;">1</button>
+                <button class="btn btn-outline" style="padding: 0.5rem 1rem;">2</button>
+                <button class="btn btn-outline" style="padding: 0.5rem 1rem;">3</button>
+                <button class="btn btn-outline" style="padding: 0.5rem 1rem;"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo footer-logo">
+                        <i class="fas fa-graduation-cap"></i> Pr.Oussama
+                    </div>
+                    <p class="footer-text">Votre partenaire académique pour l'excellence. Nous fournissons les meilleurs outils pour votre réussite scolaire.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Liens Rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="courses.html">Cours</a></li>
+                        <li><a href="files.html">Bibliothèque</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Matières</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Mathématiques</a></li>
+                        <li><a href="#">Physique</a></li>
+                        <li><a href="#">Sciences</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope" style="margin-right: 10px; color: var(--color-accent);"></i> contact@oussama.tn</li>
+                        <li><i class="fas fa-phone" style="margin-right: 10px; color: var(--color-accent);"></i> +216 22 000 000</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pr.Oussama. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CUSTOMIZER PANEL (Same as index.html) -->
+    <div class="customizer-btn" id="customizerBtn"><i class="fas fa-paint-brush"></i></div>
+    <div class="customizer-panel" id="customizerPanel">
+        <!-- Content same as index.html -->
+        <div class="panel-header">
+            <h3>Personnaliser le Design</h3>
+            <i class="fas fa-times close-panel" id="closePanel"></i>
+        </div>
+        <div class="panel-section">
+            <h4>Thèmes Prédéfinis</h4>
+            <div class="theme-presets">
+                <div class="theme-item active" data-theme="académique"><span>Académique</span></div>
+                <div class="theme-item" data-theme="minimaliste"><span>Minimaliste</span></div>
+                <div class="theme-item" data-theme="cyber"><span>Cyber Sombre</span></div>
+                <div class="theme-item" data-theme="désert"><span>Désert Chaud</span></div>
+                <div class="theme-item" data-theme="océan"><span>Océan Propre</span></div>
+            </div>
+        </div>
+        <div class="panel-section">
+            <h4>Contrôles Manuels</h4>
+            <div class="control-group">
+                <div class="control-label"><span>Couleur Primaire</span></div>
+                <input type="color" id="accentPicker" class="input-color">
+            </div>
+            <div class="control-group">
+                <div class="control-label"><span>Taille de Police</span><span id="fontSizeVal">100%</span></div>
+                <input type="range" id="fontSlider" min="80" max="130" value="100" class="input-slider">
+            </div>
+            <div class="control-group">
+                <div class="control-label"><span>Rayon des Bordures</span><span id="radiusVal">12px</span></div>
+                <input type="range" id="radiusSlider" min="0" max="24" value="12" class="input-slider">
+            </div>
+        </div>
+        <div class="panel-actions">
+            <button class="btn btn-primary" onclick="saveTheme()" style="flex: 1;">Sauvegarder</button>
+            <button class="btn btn-outline" onclick="resetTheme()" style="flex: 1;">Réinitialiser</button>
+        </div>
+    </div>
+
+    <script type="module" src="src/script.js"></script>
+</body>
+</html>

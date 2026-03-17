@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Pr.Oussama</title>
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap"></i> Pr.Oussama
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="courses.html" class="nav-link">Cours</a></li>
+                <li><a href="files.html" class="nav-link">Bibliothèque</a></li>
+                <li><a href="about.html" class="nav-link">À Propos</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langBtn" onclick="toggleLanguage()">AR</button>
+                <button class="btn btn-outline">Connexion</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTACT SECTION -->
+    <section class="section-padding" style="padding-top: 150px;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem;">
+                
+                <!-- Contact Info -->
+                <div class="animate-on-load">
+                    <h1 style="font-size: 3rem; margin-bottom: 1.5rem;">Contactez-nous</h1>
+                    <p style="color: var(--color-text-muted); margin-bottom: 3rem;">Vous avez une question sur nos cours ou besoin d'assistance ? N'hésitez pas à nous contacter via le formulaire ou nos réseaux sociaux.</p>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 2rem;">
+                        <div style="display: flex; gap: 1.5rem; align-items: center;">
+                            <div class="file-icon" style="background: rgba(var(--color-accent-rgb, 0, 212, 255), 0.1);"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4 style="margin: 0;">Email</h4>
+                                <p style="color: var(--color-text-muted);">contact@oussama.tn</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1.5rem; align-items: center;">
+                            <div class="file-icon" style="background: rgba(var(--color-accent-rgb, 0, 212, 255), 0.1);"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h4 style="margin: 0;">Téléphone</h4>
+                                <p style="color: var(--color-text-muted);">+216 22 000 000</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1.5rem; align-items: center;">
+                            <div class="file-icon" style="background: rgba(var(--color-accent-rgb, 0, 212, 255), 0.1);"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4 style="margin: 0;">Localisation</h4>
+                                <p style="color: var(--color-text-muted);">Tunis, Tunisie</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 4rem;">
+                        <h4 style="margin-bottom: 1.5rem;">Suivez-nous</h4>
+                        <div class="footer-socials">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-telegram-plane"></i></a>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 3rem;">
+                        <a href="https://wa.me/21622000000" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem;"><i class="fab fa-whatsapp"></i> Discuter sur WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="animate-on-load">
+                    <div class="card" style="padding: 3rem;">
+                        <form id="contactForm">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                                <div>
+                                    <label style="display: block; font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--color-highlight);">NOM COMPLET</label>
+                                    <input type="text" placeholder="Votre nom" required style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.05); border: 1px solid var(--color-border); border-radius: var(--radius); color: var(--color-text);">
+                                </div>
+                                <div>
+                                    <label style="display: block; font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--color-highlight);">EMAIL</label>
+                                    <input type="email" placeholder="votre@email.com" required style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.05); border: 1px solid var(--color-border); border-radius: var(--radius); color: var(--color-text);">
+                                </div>
+                            </div>
+                            <div style="margin-bottom: 1.5rem;">
+                                <label style="display: block; font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--color-highlight);">SUJET</label>
+                                <select style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.05); border: 1px solid var(--color-border); border-radius: var(--radius); color: var(--color-text);">
+                                    <option>Question sur les cours</option>
+                                    <option>Problème technique</option>
+                                    <option>Partenariat</option>
+                                    <option>Autre</option>
+                                </select>
+                            </div>
+                            <div style="margin-bottom: 2rem;">
+                                <label style="display: block; font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--color-highlight);">MESSAGE</label>
+                                <textarea placeholder="Comment pouvons-nous vous aider ?" rows="6" required style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.05); border: 1px solid var(--color-border); border-radius: var(--radius); color: var(--color-text); resize: none;"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 1.2rem;">Envoyer le message</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pr.Oussama. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CUSTOMIZER PANEL -->
+    <div class="customizer-btn" id="customizerBtn"><i class="fas fa-paint-brush"></i></div>
+    <div class="customizer-panel" id="customizerPanel">
+        <div class="panel-header">
+            <h3>Personnaliser le Design</h3>
+            <i class="fas fa-times close-panel" id="closePanel"></i>
+        </div>
+        <div class="panel-section">
+            <h4>Thèmes Prédéfinis</h4>
+            <div class="theme-presets">
+                <div class="theme-item active" data-theme="académique"><span>Académique</span></div>
+                <div class="theme-item" data-theme="minimaliste"><span>Minimaliste</span></div>
+                <div class="theme-item" data-theme="cyber"><span>Cyber Sombre</span></div>
+                <div class="theme-item" data-theme="désert"><span>Désert Chaud</span></div>
+                <div class="theme-item" data-theme="océan"><span>Océan Propre</span></div>
+            </div>
+        </div>
+        <div class="panel-actions">
+            <button class="btn btn-primary" onclick="saveTheme()" style="flex: 1;">Sauvegarder</button>
+            <button class="btn btn-outline" onclick="resetTheme()" style="flex: 1;">Réinitialiser</button>
+        </div>
+    </div>
+
+    <script type="module" src="src/script.js"></script>
+    <script>
+        document.getElementById('contactForm').onsubmit = (e) => {
+            e.preventDefault();
+            alert('Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.');
+            e.target.reset();
+        };
+    </script>
+</body>
+</html>
